@@ -1,30 +1,14 @@
 import React from 'react'
-import Background from '../components/Background'
-import Logo from '../components/Logo'
-import Header from '../components/Header'
-import Paragraph from '../components/Paragraph'
-import Button from '../components/Button'
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import Medicine from './Medicine';
+import Statistic from './Statistic';
 
+const Drawer = createDrawerNavigator();
 export default function Dashboard({ navigation }) {
   return (
-    <Background>
-      <Logo />
-      <Header>Let’s start</Header>
-      <Paragraph>
-        Your amazing app starts here. Open you favorite code editor and start
-        editing this project.
-      </Paragraph>
-      <Button
-        mode="outlined"
-        onPress={() =>
-          navigation.reset({
-            index: 0,
-            routes: [{ name: 'StartScreen' }],
-          })
-        }
-      >
-        Logout
-      </Button>
-    </Background>
+    <Drawer.Navigator>
+        <Drawer.Screen name="Medicine" component={Medicine} />
+        <Drawer.Screen name="Statistic" component={Statistic} />
+    </Drawer.Navigator>
   )
 }

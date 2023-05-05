@@ -56,9 +56,9 @@ export default function Statistic ({navigation}) {
         setSortStatus(true);
     }
     return (
-        <View style={{ flex: 1, marginTop: 40 }}>
+        <View style={{ flex: 1 }}>
             <Header/>
-            <View style={{ padding: 10 }}>
+            <View style={{ padding: 10}}>
                 <Text>Tìm kiếm gen</Text>
                 <TextInput
                     label="Nhập tên gen"
